@@ -59,8 +59,8 @@ public class Produto {
         if (o.getClass() != o.getClass()){
             return  false; // se as classes são diferentes, então não compare
         }
-        //se s objetos forem da mesma classe confere os conteudos
-        Produto p = (Produto) o;
+       // se s objetos forem da mesma classe confere os conteudos
+        Produto p = (Produto) o; // faz o casting para conferir o conteudo dos objetos
         return (p.id == this.id && p.descrição.equals(this.descrição) && p.preço == this.preço );
     }
     @Override
