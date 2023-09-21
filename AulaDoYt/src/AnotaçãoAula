@@ -1,8 +1,9 @@
-Object
+                                                ANOTAÇÃO AULA
 HashSet = o hash ele é uma lista de vetor onde eu tenho a opção para escolher em qual posição posso inserir
 TreeSet  = é composto por uma estrutura em arvores onde é pode ser localizada a posição na subArvore da esquerda ou direita
-List -> permite objetos duplicados
+List -> permite objetos duplicados e aceita valores vazios
 Set -> não permite objetos duplicados
+Set -> determina a propia posição e aceita valores vazios
 
 OBJECT
 public boolean equals(Object o){} -> é a mesma intenção que:

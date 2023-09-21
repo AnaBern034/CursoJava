@@ -50,7 +50,7 @@ public class Produto {
                 '}';
 
     }
-
+    // observnado de os objetos são iguais quando é a mesma classe e o mesmo conteudo
     @Override
     public boolean equals(Object o){  // faz comparação com os objetos para saber se os objetos são iguais
         if (o == this){
