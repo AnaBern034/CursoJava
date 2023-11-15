@@ -1,54 +1,47 @@
 package org.example;
 
-import java.util.*;
-import java.util.stream.Collectors;
-
 public class Main {
+
     public static void main(String[] args) {
-        List<Produto> lista = new ArrayList<>();
-        lista.add(new Produto(1L,"Compiuter", 1000));
-        lista.add(new Produto(2L,"TV", 2000));
-        lista.add(new Produto(1L,"Compiuter", 1000));
-        lista.add(new Produto(2L,"TV", 2000));
-        System.out.println(lista);
+      var b = 3.5;  // esse valor o java vai inferir qual o tipo da variavel
+        // as variaveis em java são em um determinado em tipo e elas são imutaveis
+        // os tipos var em java, não consegue ser mutaveis então após a criação da var sem ser inicialiazada, ele dá problema
+        System.out.println("Valor da variavel {var} "+b);
 
-        Set<Produto> conjunto = new HashSet<>();
-        conjunto.add(new Produto(1L,"Compiuter", 1000));
-        conjunto.add(new Produto(3L,"Mouse", 1000));
-        conjunto.add(new Produto(2L,"Compiuter", 1000));
-        conjunto.add(new Produto(3L,"Mouse", 1000));
-        System.out.println(conjunto);
+       /*
+       ------------------------ ------------------------------- --------------------------------   -------------------
+         TIPOS PRIMITIVOS -> QUANTIDADE DE BYTES
 
-        Produto p1 = new Produto(1L,"mouse",10.0);
-        Produto p2 =  new Produto(1L,"mouse",10.0);
-        System.out.println(p1.equals(p2));
+        Caso queira fazer o cast de tipos, o byte precisa ser maior que outro tipo para serem convertido, caso contrario o sistema dá erro
 
-        System.out.println("======= PERCORRER A LISTA SEM USAR STREAM  ======");
-        for (Produto p: lista) {  // o tipo da lista e o objeto lista que foi criada do tipo produto
-            System.out.println(p);
-        }
-        System.out.println("=====  USANDO STREAM  ======");
-        //STREAM
+          BYTE > 1byte
+         SHORT > 2byte
+         INT > 4byte
+         LONG > 8byte
+         FLOAT > 4byte
+         DOUBLE > 8byte
+       ------------------------ ------------------------------- --------------------------------   -------------------
+        */
 
-        lista.stream().forEach((p) -> {System.out.println(p);});
-    //    ´para cada p -> (lista) de produtos, coloque o sout "p" para mostrar a lista de produtos
+        String h = "hello world";
+        String upperCase = h.toUpperCase(); // -> essa função converte o valor para maiuscula
+        System.out.println(upperCase);
 
-        System.out.println("Aplicando porcentagem com cada produto da lista usando stream");
-        // aplicando porcentagem de preços
-        lista.stream().forEach(produto -> {produto.setPreço(produto.getPreço() * 1.20);System.out.println(produto);});
+         String s = "Bom dia, como você chama?";
+         s = s.replace("Bom dia, como você chama?","Bom dia S"); // -> a função replace muda/substitui o valor da string
+        System.out.println(s);
+         s = s.concat("enhora"); // -> essa função serve para concetar o valor de uma string
+        System.out.println(s);
 
-        System.out.println("===== ORDENAR POR PREÇO ======");
-        lista.stream().sorted(Comparator.comparing(produto -> produto.getPreço()))// comparar o preço de forma ordenada
-                .forEach(produto -> {System.out.println(produto); // mostrar no console a lista de produtos com preços de forma ordenada
-                });                                              // de forma ordenada
-        // essa lista é uma cópia das listas de produtos, agora para criar de forma ordenada :
+        //Tipos primitivos não tem o operador "."
+        String testandoString = "Ola ana";
+        System.out.println(testandoString.startsWith("Ola")); // -> esse método é para mostrar se o valor que começa é verdadeiro ou falso
+        System.out.println(testandoString.length()); // -> retorna o valor da quantidade de caracteres
+        System.out.printf("Frase: %s",testandoString); // esse método não precisa de concatenar apenas colocar o "dolla S" mas funciona só para printf
 
-        System.out.println(" ======= LISTA CRIADA E ORDENADA POR PREÇO ======= ");
-        List<Produto> novaList = lista.stream().sorted(Comparator.comparing(produto -> produto.getPreço())).collect(Collectors.toList());
-        // ordene o preço dos produtos pegue o conteudo e torne uma lista
-        System.out.println(novaList);
 
-        Optional<Produto> maisCaro = lista.stream().max(Comparator.comparing(produto ->  produto.getPreço()));
-        System.out.println(maisCaro);
+
     }
+
+
 }
