@@ -1,6 +1,6 @@
                                                 ANOTAÇÃO AULA
 HashSet = o hash ele é uma lista de vetor onde eu tenho a opção para escolher em qual posição posso inserir
-TreeSet  = é composto por uma estrutura em arvores onde é pode ser localizada a posição na subArvore da esquerda ou direita
+TreeSet  = é composto por uma estrutura em arvores onde é , e pode ser localizada a posição na subArvore da esquerda ou direita
 List -> permite objetos duplicados e aceita valores vazios
 Set -> não permite objetos duplicados
 Set -> determina a propia posição e aceita valores vazios
