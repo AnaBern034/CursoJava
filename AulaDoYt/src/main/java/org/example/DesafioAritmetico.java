@@ -3,7 +3,7 @@ package org.example;
 public class DesafioAritmetico {
     public static void main(String[] args) {
 
-        Integer result1 = (int) Math.pow(6 * (3+2),2);
+        Integer result1 = (int) Math.pow(6 * (3+2),2); // -> esse math.pow serve para calcular a potencia de um numero
         Integer result2 = 3*2;
         Integer divisão = result1/result2;
 

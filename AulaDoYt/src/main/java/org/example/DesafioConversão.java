@@ -5,7 +5,7 @@ import java.util.Locale;
 public class DesafioConversão {
     public static void main(String[] args) {
 
-        Locale.setDefault(new Locale("pt","BR")); // passar para linguagem br
+     // Locale.setDefault(new Locale("pt","BR")); // passar para linguagem br
 
         System.out.println("======== DESAFIO ========");
 
