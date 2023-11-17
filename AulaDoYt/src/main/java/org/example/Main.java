@@ -23,7 +23,7 @@ public class Main {
         Produto p2 =  new Produto(1L,"mouse",10.0);
         System.out.println(p1.equals(p2));
 
-        System.out.println("======= PERCORRER A LISTA SEM USAR STREAM  ======");
+        System.out.println("\n======= PERCORRER A LISTA SEM USAR STREAM  ======");
         for (Produto p: lista) {  // o tipo da lista e o objeto lista que foi criada do tipo produto
             System.out.println(p);
         }
@@ -33,11 +33,11 @@ public class Main {
         lista.stream().forEach((p) -> {System.out.println(p);});
     //    ´para cada p -> (lista) de produtos, coloque o sout "p" para mostrar a lista de produtos
 
-        System.out.println("Aplicando porcentagem com cada produto da lista usando stream");
+        System.out.println("\nAplicando porcentagem com cada produto da lista usando stream");
         // aplicando porcentagem de preços
         lista.stream().forEach(produto -> {produto.setPreço(produto.getPreço() * 1.20);System.out.println(produto);});
 
-        System.out.println("===== ORDENAR POR PREÇO ======");
+        System.out.println("\n===== ORDENAR POR PREÇO ======");
         lista.stream().sorted(Comparator.comparing(produto -> produto.getPreço()))// comparar o preço de forma ordenada
                 .forEach(produto -> {System.out.println(produto); // mostrar no console a lista de produtos com preços de forma ordenada
                 });                                              // de forma ordenada
