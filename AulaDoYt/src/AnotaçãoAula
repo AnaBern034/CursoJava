@@ -1,9 +1,46 @@
                                                 ANOTAÇÃO AULA
-HashSet = o hash ele é uma lista de vetor onde eu tenho a opção para escolher em qual posição posso inserir
-TreeSet  = é composto por uma estrutura em arvores onde é pode ser localizada a posição na subArvore da esquerda ou direita
-List -> permite objetos duplicados e aceita valores vazios
-Set -> não permite objetos duplicados
-Set -> determina a propia posição e aceita valores vazios
+                                             ====================
+[HashSet = o hash ele é uma lista de vetor onde eu tenho a opção para escolher em qual posição posso inserir]
+
+[TreeSet  = é composto por uma estrutura em arvores onde pode ser localizada a posição na subArvore da esquerda ou direita, ele
+respeita a ordem de inserção de acordo com a sua pre-definição]
+
+[List -> permite objetos duplicados e aceita valores vazios ele é parecido com o array]
+
+[ Set -> não permite objetos duplicados,determina a propia posição e aceita valores vazios {
+SortedSet é uma implementação para a lista de set na forma ordenada, possibilitando organização da lista
+    }
+]
+
+
+[Map -> tem uma estrutura de chave e valor, a estrutura da chave não aceita repetição e valor ele pode ser repetido]
+
+[ Queue -> possui a lógica da fila, first in, first out {
+"The elements, which have a higher priority, comes first" ou seja uma queue ela possui a estrutura de dados de forma ordenada
+e prioriza quem entra primeiro.
+    ======================          ==========================        ==============
+    Method                               Brief description
+  getFirst()           Gets the first item of the head of the queue without removing it.
+  getLast()            Gets the first item of the tail of the queue without removing it.
+  addFirst(E e)        Adds an item to the head of the queue
+  addLast(E e)         Adds an item to the tail of the queue
+  removeFirst()        Removes the first item at the head of the queue
+  removeLast()         Removes the first item at the tail of the queue
+
+  Example :
+
+  Deque<String> dequeA = new LinkedList<>();
+
+  dequeA.addLast("element 3"); //add element at tail
+  dequeA.addFirst("element 2"); //add element at head
+
+   ======================          ==========================        ===============
+
+    }
+]
+
+[Stack -> last in/ first out  armazena os dados em forma de pilha]
+
 
 OBJECT
 public boolean equals(Object o){} -> é a mesma intenção que:

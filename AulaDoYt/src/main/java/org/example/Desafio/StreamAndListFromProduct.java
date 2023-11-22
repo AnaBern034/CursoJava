@@ -1,9 +1,10 @@
-package org.example;
+package org.example.Desafio;
 
+import org.example.Produto;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Main {
+public class StreamAndListFromProduct {
     public static void main(String[] args) {
         List<Produto> lista = new ArrayList<>();
         lista.add(new Produto(1L,"Compiuter", 1000));
